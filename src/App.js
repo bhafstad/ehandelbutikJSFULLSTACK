@@ -10,11 +10,15 @@
 
 // export default App;
 
+import { Routes } from './routes/routes'
+import { Navigation } from './components/navigation/navigation'
+
+
 // nya sättet att skriva funktioner - kräver måsklamrar när app importeras till index.js
 export const App = () => {
   return (
-    <div>
-      <h1>Test!</h1>
-    </div>
+    <Routes>
+      <Navigation />
+    </Routes>
   )
 }

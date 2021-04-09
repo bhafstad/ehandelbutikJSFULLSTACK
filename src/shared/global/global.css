@@ -1,0 +1,7 @@
+/* GLOBAL - ALLA VÄRDEN SOM ÄR GLOBALA */
+/* DVS. GÄLLER ÖVERALLT I HELA APPLIKATIONEN */
+
+body {
+    margin: 0;
+    padding: 0;
+}

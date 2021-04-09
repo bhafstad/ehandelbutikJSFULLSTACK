@@ -12,6 +12,7 @@
 
 import { Routes } from './routes/routes'
 import { Navigation } from './components/navigation/navigation'
+import './shared/global/global.css'
 
 
 // nya sättet att skriva funktioner - kräver måsklamrar när app importeras till index.js

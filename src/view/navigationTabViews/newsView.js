@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const newsView = () => {
+export const NewsView = () => {
     return (
         <div>
             <h1>news view</h1>

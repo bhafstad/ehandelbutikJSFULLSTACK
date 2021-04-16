@@ -15,7 +15,8 @@
 .shopButton,
 .galleryButton,
 .newsButton,
-.signInButton {
+.signInButton,
+.authUserNavigation {
     /* display: inline; BY DEFAULT */
     cursor: pointer;
     padding: 2%;
@@ -30,7 +31,11 @@ grid-column: 9/10;
 }
 
 .signInButton {
-    grid-column: 20/20;
+    grid-column: 18/20;
     justify-self: center;
     align-self: center;
+}
+
+.authUserNavigation {
+    grid-column: 18/20;
 }

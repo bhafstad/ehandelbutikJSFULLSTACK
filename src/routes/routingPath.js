@@ -1,8 +1,8 @@
-const homeView = "/";
+const homeView = '/';
 const galleryView = '/gallery';
-const newsView = "/news";
-const shopView = "/shop";
-const signInView = "/signin";
+const newsView = '/news';
+const shopView = '/shop';
+const signInView = '/signin';
 
 export default {
     homeView,

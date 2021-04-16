@@ -1,25 +1,16 @@
-
-// gammal typing av funktioner
-// function App() {
-//   return (
-//     <div>
-//       <h1>Test</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import { Routes } from './routes/routes'
-import { Navigation } from './components/navigation/navigation'
+import { Routes } from './routes/Routes'
+import { Navigation } from './components/navigation/Navigation'
 import './shared/global/global.css'
+import { UserProvider } from './shared/provider/UserProvider'
 
 
 // nya sättet att skriva funktioner - kräver måsklamrar när app importeras till index.js
 export const App = () => {
   return (
-    <Routes>
-      <Navigation />
-    </Routes>
+    <UserProvider>
+      <Routes>
+        <Navigation />
+      </Routes>
+    </UserProvider>
   )
 }

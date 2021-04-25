@@ -4,6 +4,7 @@ import logotype from '../../../shared/images/logotype.svg'
 import routingPath from '../../../routes/RoutingPath'
 import { useContext } from 'react'
 import { UserContext } from '../../../shared/provider/UserProvider'
+import { Profile } from '../../../components/profile/Profile'
 
 export const DesktopNavigation = () => {
     const history = useHistory()
@@ -21,7 +22,7 @@ export const DesktopNavigation = () => {
 const displayAuthUserOrSignIn2 = () => {
     return authenticatedUser
         // om true, körs kod efter frågetecken
-        ? <span className='authUserNavigation'> {authenticatedUser} </span>
+        ? <span className='authUserNavigation'> <Profile /> </span>
         : <span className='signInButton' onClick={() => history.push(routingPath.signInView)}>sign In</span>
 }
     return (

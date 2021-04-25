@@ -6,10 +6,23 @@ import { GalleryView } from '../view/navigationTabViews/GalleryView'
 import { NewsView } from '../view/navigationTabViews/NewsView'
 import { ShopView } from '../view/navigationTabViews/ShopView'
 import { SignInView } from '../view/navigationTabViews/SignInView'
+import { ProfileView } from '../view/profiledropdownviews/ProfileView'
+import { SettingsView } from '../view/profiledropdownviews/SettingsView'
+import { SavedProductsView } from '../view/profiledropdownviews/SavedProductsView'
+
+
 import routingPath from './RoutingPath'
 
 export const Routes = ({children}) => {
     const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
+
+    const blockRouteIfAuthenticated = (navigateToViewIfAuthenticated) => {
+        return authenticatedUser ? HomeView : navigateToViewIfAuthenticated
+    }
+
+    const authenticatedRequired = (navigateToViewIfAuthenticated) => {
+        return authenticatedUser ? navigateToViewIfAuthenticated : SignInView
+    }
 
     const checkIfUserIsAuthenticated = () => {
         const getLocalStorage = localStorage.getItem('username')
@@ -19,9 +32,9 @@ export const Routes = ({children}) => {
     }
 
     // SPARA ANVÄNDARE I BROWSER
-    // useEffect(() => {
-    //     checkIfUserIsAuthenticated()
-    // })
+    useEffect(() => {
+        checkIfUserIsAuthenticated()
+    })
 
     return (
         
@@ -35,7 +48,10 @@ export const Routes = ({children}) => {
                 <Route exact path={routingPath.galleryView} component={GalleryView} />
                 <Route exact path={routingPath.newsView} component={NewsView} />
                 <Route exact path={routingPath.shopView} component={ShopView} />
-                <Route exact path={routingPath.signInView} component={SignInView} />
+                <Route exact path={routingPath.signInView} component={blockRouteIfAuthenticated(SignInView)} />
+                <Route exact path={routingPath.settingsView} component={SettingsView} />
+                <Route exact path={routingPath.profileView} component={authenticatedRequired(ProfileView)} />
+                <Route exact path={routingPath.savedProductsView} component={SavedProductsView} />
                 <Route component={HomeView} />
             </Switch>
         </BrowserRouter>

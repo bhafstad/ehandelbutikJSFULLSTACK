@@ -3,11 +3,17 @@ const galleryView = '/gallery';
 const newsView = '/news';
 const shopView = '/shop';
 const signInView = '/signin';
+const profileView = '/profile';
+const settingsView = "/settings";
+const savedProductsView = "/savedproducts";
 
 export default {
     homeView,
     galleryView,
     newsView,
     signInView,
-    shopView
+    shopView,
+    profileView,
+    settingsView,
+    savedProductsView
 }

@@ -1,15 +1,15 @@
 .desktopNavigationWrapper {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    background-color: orange;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  background-color: orange;
 }
 
 .navLogo {
-    width: 80%;
-    height: 80%;
-    cursor: pointer;
-    grid-column: 2/3;
-    padding: 4%;
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  grid-column: 2/3;
+  padding: 4%;
 }
 
 .shopButton,
@@ -17,25 +17,25 @@
 .newsButton,
 .signInButton,
 .authUserNavigation {
-    /* display: inline; BY DEFAULT */
-    cursor: pointer;
-    padding: 2%;
-    text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    justify-self: center;
-    align-self: center;
+  /* display: inline; BY DEFAULT */
+  cursor: pointer;
+  padding: 2%;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  justify-self: center;
+  align-self: center;
 }
 
 .shopButton {
-grid-column: 9/10;
+  grid-column: 9/10;
 }
 
 .signInButton {
-    grid-column: 18/20;
-    justify-self: center;
-    align-self: center;
+  grid-column: 18/20;
+  justify-self: center;
+  align-self: center;
 }
 
 .authUserNavigation {
-    grid-column: 18/20;
+  grid-column: 18/20;
 }

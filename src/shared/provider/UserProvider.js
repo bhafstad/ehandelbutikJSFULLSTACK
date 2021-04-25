@@ -1,5 +1,6 @@
 import React, { useState, createContext } from 'react'
 
+// referensen till det globala värdet
 export const UserContext = createContext(null);
 
 export const UserProvider = ({children}) => {

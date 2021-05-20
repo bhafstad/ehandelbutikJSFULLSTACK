@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ehandelbutikJSFULLSTACK/static/css/main.9822c50c.chunk.css",
+    "main.js": "/ehandelbutikJSFULLSTACK/static/js/main.a015df4d.chunk.js",
+    "main.js.map": "/ehandelbutikJSFULLSTACK/static/js/main.a015df4d.chunk.js.map",
+    "runtime-main.js": "/ehandelbutikJSFULLSTACK/static/js/runtime-main.c280532c.js",
+    "runtime-main.js.map": "/ehandelbutikJSFULLSTACK/static/js/runtime-main.c280532c.js.map",
+    "static/js/2.1a9366e7.chunk.js": "/ehandelbutikJSFULLSTACK/static/js/2.1a9366e7.chunk.js",
+    "static/js/2.1a9366e7.chunk.js.map": "/ehandelbutikJSFULLSTACK/static/js/2.1a9366e7.chunk.js.map",
+    "static/js/3.8fa915fd.chunk.js": "/ehandelbutikJSFULLSTACK/static/js/3.8fa915fd.chunk.js",
+    "static/js/3.8fa915fd.chunk.js.map": "/ehandelbutikJSFULLSTACK/static/js/3.8fa915fd.chunk.js.map",
+    "index.html": "/ehandelbutikJSFULLSTACK/index.html",
+    "static/css/main.9822c50c.chunk.css.map": "/ehandelbutikJSFULLSTACK/static/css/main.9822c50c.chunk.css.map",
+    "static/js/2.1a9366e7.chunk.js.LICENSE.txt": "/ehandelbutikJSFULLSTACK/static/js/2.1a9366e7.chunk.js.LICENSE.txt",
+    "static/media/logotype.a85df0c8.svg": "/ehandelbutikJSFULLSTACK/static/media/logotype.a85df0c8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c280532c.js",
+    "static/js/2.1a9366e7.chunk.js",
+    "static/css/main.9822c50c.chunk.css",
+    "static/js/main.a015df4d.chunk.js"
+  ]
+}

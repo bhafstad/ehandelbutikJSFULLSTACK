@@ -9,11 +9,12 @@ import { SignInView } from '../view/navigationTabViews/SignInView'
 import { ProfileView } from '../view/profiledropdownviews/ProfileView'
 import { SettingsView } from '../view/profiledropdownviews/SettingsView'
 import { SavedProductsView } from '../view/profiledropdownviews/SavedProductsView'
+import { ItemDetail } from '../view/ItemDetail'
 
 
-import routingPath from './RoutingPath'
+import RoutingPath from './RoutingPath'
 
-export const Routes = ({children}) => {
+export const Routes = ({ children }) => {
     const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
 
     const blockRouteIfAuthenticated = (navigateToViewIfAuthenticated) => {
@@ -26,7 +27,7 @@ export const Routes = ({children}) => {
 
     const checkIfUserIsAuthenticated = () => {
         const getLocalStorage = localStorage.getItem('username')
-        if(getLocalStorage) {
+        if (getLocalStorage) {
             setAuthenticatedUser(getLocalStorage)
         }
     }
@@ -37,7 +38,7 @@ export const Routes = ({children}) => {
     })
 
     return (
-        
+
         <BrowserRouter>
             {children}
             <Switch>
@@ -45,16 +46,17 @@ export const Routes = ({children}) => {
                 {/* <Route exact path={'/test'} component={TestView} /> */}
                 {/* här brukar man ha 404-sida om app kraschar etc. - ingen path = denna sida är home, man behöver inte navigera till den*/}
                 {/* Detta kallas Fallback-sida - om någon försöker gå in på sida som inte finns, skickas tillbaka hit */}
-                <Route exact path={routingPath.galleryView} component={GalleryView} />
-                <Route exact path={routingPath.newsView} component={NewsView} />
-                <Route exact path={routingPath.shopView} component={ShopView} />
-                <Route exact path={routingPath.signInView} component={blockRouteIfAuthenticated(SignInView)} />
-                <Route exact path={routingPath.settingsView} component={SettingsView} />
-                <Route exact path={routingPath.profileView} component={authenticatedRequired(ProfileView)} />
-                <Route exact path={routingPath.savedProductsView} component={SavedProductsView} />
+                <Route exact path={RoutingPath.galleryView} component={GalleryView} />
+                <Route exact path={RoutingPath.newsView} component={NewsView} />
+                <Route exact path={RoutingPath.shopView} component={ShopView} />
+                <Route exact path={RoutingPath.signInView} component={blockRouteIfAuthenticated(SignInView)} />
+                <Route exact path={RoutingPath.settingsView} component={SettingsView} />
+                <Route exact path={RoutingPath.profileView} component={authenticatedRequired(ProfileView)} />
+                <Route exact path={RoutingPath.savedProductsView} component={SavedProductsView} />
+                <Route exact path={RoutingPath.itemDetailView} component={ItemDetail} />
                 <Route component={HomeView} />
             </Switch>
         </BrowserRouter>
-        
+
     )
 }
